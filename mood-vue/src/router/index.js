@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/index.vue'
+import Index from '@/components/index.vue'
+import Login from '@/components/login.vue'
+import Test from '@/components/test.vue'
+
+import { Message } from "element-ui"
 
 Vue.use(Router)
 
@@ -9,7 +13,18 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: index
+      component: Index
+    },
+    {
+    	path: '/login',
+    	name: 'login',
+    	component: Login
+    },
+    {
+    	path: '/test',
+    	name: 'test',
+    	component: Test
     }
   ]
 })
+
