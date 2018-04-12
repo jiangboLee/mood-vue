@@ -13,14 +13,6 @@ import axiosPlugin from "./config/request.js"
 Vue.use(ElementUI);
 Vue.use(axiosPlugin);
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-});
-
 // 路由拦截
 // 差点忘了说明,不是所有版块都需要鉴权的
 // 所以需要鉴权,我都会在路由meta添加添加一个字段requireLogin,设置为true的时候
@@ -56,3 +48,12 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+});
+

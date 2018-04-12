@@ -1,12 +1,11 @@
 import axios from "axios";
 import qs from "qs";
-import { Message } from "element-ui";
 
 const Axios = axios.create({
 	baseURL: "http://tcmobileapi.t.17usoft.com/ypwebapi/api", // 因为我本地做了反向代理
   	timeout: 1000,
   	responseType: "json",
-  	withCredentials: true, // 是否允许带cookie这些
+  	// withCredentials: true, // 是否允许带cookie这些
   	headers: {
    		"Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
   	}
@@ -36,7 +35,7 @@ Axios.interceptors.request.use(
       //  饿了么的消息弹窗组件,类似toast
       showClose: true,
       message: error,
-      type: "error.data.error.message"
+      type: "error"
     });
     return Promise.reject(error.data.error.message);
   }
