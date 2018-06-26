@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/index.vue'
-import Login from '@/components/login.vue'
 import Test from '@/components/test.vue'
 
 import { Message } from "element-ui"
@@ -14,11 +13,6 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
-    },
-    {
-    	path: '/login',
-    	name: 'login',
-    	component: Login
     },
     {
     	path: '/test',
